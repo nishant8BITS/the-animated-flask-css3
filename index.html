@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Material responsive table</title>
+<meta charset="utf-8" />
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.container{
+   
+    margin: 250px;
+    position: relative;
+    width: 500px;
+}
+
+.flask {
+    height: 405px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+}
+
+.flask_bottom{
+    bottom: 0;
+    position: absolute;
+}
+
+.big_triangle{
+    overflow: hidden;
+    position: relative;
+    width: 368px;
+	height: 250px;
+}
+
+
+.big_triangle:before {
+    border-right: 152px solid transparent;
+    border-top: 250px solid white;
+    content: "";
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 100;
+}
+.big_triangle:after {
+    border-left: 154px solid transparent;
+    border-top: 250px solid white;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: 100;
+}
+	
+#triangle-up {
+    border-bottom: 55px solid #3a2481;
+    border-left: 32px solid transparent;
+    border-right: 42px solid transparent;
+    bottom: 0;
+    height: 0;
+    position: absolute;
+    width: 0;
+	z-index: 4;
+}
+
+#pentagon {
+    position: relative;
+    width: 54px;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: red transparent;
+	
+}
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
+
+}
+
+#parallelogram {
+
+	-webkit-transform: skew(35deg);
+	   -moz-transform: skew(35deg);
+	     -o-transform: skew(35deg);
+	transform: skew(35deg);
+    bottom: 0;
+    height: 55px;
+    left: 51px;
+    position: absolute;
+    width: 180px;
+    z-index: 1;
+	background: none repeat scroll 0 0 #4248c0;
+}
+
+#block2{
+    bottom: -50px;
+    height: 71px;
+    left: 23px;
+    position: absolute;
+    width: 172px;
+    z-index: 3;
+	background: none repeat scroll 0 0 #4248c0;
+
+}
+
+
+
+#block3 {
+    background: none repeat scroll 0 0 #4248c0;
+    bottom: 22px;
+    height: 71px;
+    left: 50px;
+    position: absolute;
+    transform: rotate(24deg);
+    transform-origin: left top 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#block4 {
+    background: none repeat scroll 0 0 #37acdd;
+    bottom: 0;
+    height: 170px;
+    right: 0;
+    position: absolute;
+    width: 300px;
+    z-index: 1;
+}
+
+#block5 {
+    background: none repeat scroll 0 0 #1493c8;
+    bottom: 24px;
+    height: 218px;
+    position: absolute;
+    right: -95px;
+    transform: rotate(24deg);
+    transform-origin: right top 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#block6 {
+    background: none repeat scroll 0 0 #5c30ae;
+    bottom: 218px;
+    height: 50px;
+    position: absolute;
+    right: -95px;
+    transform: rotate(-12deg);
+    transform-origin: left top 0;
+    width: 100%;
+    z-index: 3;
+}
+
+
+#block7 {
+    background: none repeat scroll 0 0 #6c49ac;
+    height: 155px;
+    left: 152px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 62px;
+}
+
+
+
+#block8 {
+    background: none repeat scroll 0 0 #5c30ae;
+    height: 50px;
+    position: absolute;
+    right: -26px;
+    top: 110px;
+    transform: rotate(24deg);
+    transform-origin: right top 0;
+    width: 150px;
+    z-index: 3;
+}
+
+
+#block10 {
+    background: none repeat scroll 0 0 #5c30ae;
+    bottom: 0;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+
+#block9 {
+    background: none repeat scroll 0 0 #37acdd;
+    height: 70px;
+    position: absolute;
+    right: -35px;
+    top: 25px;
+    transform: rotate(30deg);
+    transform-origin: right top 0;
+    width: 150px;
+    z-index: 3;
+}
+
+
+
+#block11 {
+    background: none repeat scroll 0 0 white;
+    height: 50px;
+    position: absolute;
+    right: -45px;
+    top: -13px;
+    transform: rotate(20deg);
+    transform-origin: right top 0;
+    width: 150px;
+    z-index: 3;
+}
+#triangle2{
+    border-bottom: 165px solid #4266c0;
+    border-left: 93px solid transparent;
+    border-right: 200px solid transparent;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    z-index: 2;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="flask">
+	<div id="block7">
+		<div id="block8"></div>
+		<div id="block9"></div>
+		<div id="block10"></div>
+		<div id="block11"></div>
+	</div>
+	<div class="flask_bottom">
+		<div class="big_triangle">
+		<!-- 	<div id="pentagon"></div> -->
+			<div id="triangle-up"></div>
+			<div id="triangle2"></div>
+			<div id="parallelogram"></div>
+			<div id="block2"></div>
+			<div id="block3"></div>
+			<div id="block4"></div>
+			<div id="block5"></div>
+			<div id="block6"></div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
