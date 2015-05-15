@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: #292548;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1330px;
+  position: relative;
+}
+
+.flask {
+  height: 405px;
+  width: 368px;
+  position: absolute;
+  bottom: 0;
+}
+
+.flask_throat {
+  background-color: #6c49ac;
+  overflow: hidden;
+  height: 155px;
+  width: 62px;
+  position: absolute;
+  left: 152px;
+  top: 0;
+}
+
+.flask_throat_one {
+  position: absolute;
+  -ms-transform: rotate(24deg);
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+  -ms-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  background-color: #5c30ae;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: -26px;
+  top: 110px;
+}
+
+.flask_throat_two {
+  position: absolute;
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -ms-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  background-color: #37acdd;
+  width: 150px;
+  height: 70px;
+  position: absolute;
+  z-index: 3;
+  right: -35px;
+  top: 25px;
+}
+
+.flask_throat_three {
+  position: absolute;
+  background-color: #5c30ae;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+}
+
+.flask_throat_four {
+  position: absolute;
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -ms-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  background-color: #292548;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: -45px;
+  top: -13px;
+}
+
+.flask_bottom {
+  bottom: 0;
+  position: absolute;
+}
+
+.big_triangle {
+  overflow: hidden;
+  position: relative;
+  width: 368px;
+  height: 250px;
+}
+.big_triangle:before, .big_triangle:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 250px solid #292548;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.big_triangle:before {
+  border-right: 152px solid transparent;
+  left: 0;
+}
+.big_triangle:after {
+  border-left: 154px solid transparent;
+  right: 0;
+}
+
+.flask_bottom_one {
+  width: 0;
+  height: 0;
+  border-bottom: 55px solid #3a2481;
+  border-left: 32px solid transparent;
+  border-right: 42px solid transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+.flask_bottom_two {
+  border-bottom: 165px solid #4266c0;
+  border-left: 93px solid transparent;
+  border-right: 200px solid transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.flask_bottom_five {
+  position: absolute;
+  background-color: #4248c0;
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  z-index: 3;
+  left: 50px;
+  bottom: 18px;
+  -ms-transform: rotate(24deg);
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+  -ms-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-animation-name: flask;
+  animation-name: flask;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes flask {}
+@keyframes flask {}
+.flask_bottom_six {
+  position: absolute;
+  background-color: #37acdd;
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+}
+
+.flask_bottom_seven {
+  position: absolute;
+  background-color: #1493c8;
+  width: 100%;
+  height: 218px;
+  position: absolute;
+  z-index: 3;
+  right: -95px;
+  bottom: 24px;
+  -ms-transform: rotate(24deg);
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+  -ms-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+}
+
+.flask_bottom_eight {
+  position: absolute;
+  background-color: #5c30ae;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: -95px;
+  bottom: 218px;
+  -ms-transform: rotate(-12deg);
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+  -ms-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.flask_small {
+  width: 200px;
+  height: 230px;
+}
+.flask_small .flask_throat {
+  background-color: #6c49ac;
+  height: 99px;
+  left: 82px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 35px;
+}
+.flask_small .flask_throat_one {
+  background-color: #5c30ae;
+  height: 50px;
+  position: absolute;
+  right: -26px;
+  top: 75px;
+  transform: rotate(24deg);
+  transform-origin: right top 0;
+  width: 150px;
+  z-index: 3;
+}
+.flask_small .flask_throat_two {
+  background-color: #37acdd;
+  height: 55px;
+  position: absolute;
+  right: -30px;
+  top: 11px;
+  transform: rotate(30deg);
+  transform-origin: right top 0;
+  width: 60px;
+  z-index: 3;
+}
+.flask_small .flask_throat_three {
+  background-color: #5c30ae;
+  bottom: 0;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+.flask_small .big_triangle {
+  width: 200px;
+  height: 135px;
+}
+.flask_small .big_triangle:before, .flask_small .big_triangle:after {
+  border-top: 135px solid #292548;
+}
+.flask_small .big_triangle:before {
+  border-right: 82px solid transparent;
+}
+.flask_small .big_triangle:after {
+  border-left: 84px solid transparent;
+}
+.flask_small .flask_bottom_one {
+  border-bottom: 35px solid #3a2481;
+  border-left: 15px solid transparent;
+  border-right: 24px solid transparent;
+}
+.flask_small .flask_bottom_two {
+  border-bottom: 94px solid #4266c0;
+  border-left: 44px solid transparent;
+  border-right: 113px solid transparent;
+}
+.flask_small .flask_bottom_five {
+  bottom: -21px;
+  left: 25px;
+}
+.flask_small .flask_bottom_six {
+  height: 90px;
+}
+.flask_small .flask_bottom_seven {
+  bottom: 26px;
+  height: 85px;
+  right: -14px;
+}
+.flask_small .flask_bottom_eight {
+  bottom: 107px;
+  height: 20px;
+  right: 0;
+}
+
+.flask_right {
+  right: 3%;
+}
+
+.flask_left {
+  left: 3%;
+}
+
+/* @-webkit-keyframes border_background {
+	0% {
+		border-color: #3a2481;
+	}
+
+	50% {
+		border-color: #242781;
+	}
+		
+	100% {
+		border-color: #244081;
+	}
+}
+
+@keyframes border_background {
+	0% {
+		border-color: #3a2481;
+	}
+
+	50% {
+		border-color: #242781;
+	}
+		
+	100% {
+		border-color: #244081;
+	}
+} */

@@ -1,0 +1,292 @@
+.transition(@property, @time, @effect, @delay){
+	-webkit-transition: @property @time @effect @delay;
+	-webkit-transition-delay:  @time @delay;
+	transition: @property @time @effect @delay;
+}
+
+.complex_transition(@property, @property2, @time,  @effect){
+
+	-webkit-transition-property: @property, @property2;	
+	transition-property: @property, @property2;
+	
+	-webkit-transition-duration: @time;
+	transition-duration: @time;
+	
+	 -webkit-transition-timing-function: @effect;
+	transition-timing-function: @effect;
+}
+
+.translate(@x, @y) {
+	-webkit-transform: translateZ(0px) translate(@x, @y);
+	-ms-transform: translateZ(0px) translate(@x, @y); 
+	transform: translateZ(0px) translate(@x, @y);
+}
+
+.transform_rotate(@value){
+    -ms-transform: rotate(@value);
+    -webkit-transform: rotate(@value);
+    transform: rotate(@value);
+}
+
+.transform_origin(@parametr1, @parametr2){
+	-ms-transform-origin: @parametr1  @parametr2;
+	-webkit-transform-origin: @parametr1  @parametr2;
+	transform-origin: @parametr1  @parametr2;
+}
+
+.skew(@value1){
+	-ms-transform: rotate(@value1);
+	-webkit-transform: skew(@value1);
+	-o-transform: skew(@value1);
+	transform: skew(@value1);
+}
+
+.scale3d(@value1){
+	-webkit-transform: scale(@value1);
+	-ms-transform: scale(@value1);
+	transform: scale(@value1);
+}
+
+.flask_element_type_one(@background, @width, @height, @bottom, @right, @z_index, @rotate, @origin_val_one, @origin_val_two){
+    background-color: @background;
+    width: @width;
+    height: @height;
+	
+    position: absolute;
+	bottom: @bottom;
+    right: @right;
+	z-index: @z_index;
+	
+    .transform_rotate(@rotate);
+    .transform_origin(@origin_val_one, @origin_val_two);
+}
+
+.flask_element_type_two(@background, @width, @height, @bottom, @left, @z_index, @rotate, @origin_val_one, @origin_val_two){
+    background-color: @background;
+    width: @width;
+    height: @height;
+	
+    position: absolute;
+	bottom: @bottom;
+    left: @left;
+	z-index: @z_index;
+	
+    .transform_rotate(@rotate);
+    .transform_origin(@origin_val_one, @origin_val_two);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+
+.container{
+   
+    margin: 250px;
+    position: relative;
+    width: 500px;
+}
+
+.flask {
+    height: 405px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+}
+
+.flask_throat {
+
+    background-color: #6c49ac;
+	overflow: hidden;
+	
+    height: 155px;
+	width: 62px;
+    
+    position: absolute;
+	left: 152px;
+    top: 0;
+}
+
+.flask_throat_one {
+
+    background-color: #5c30ae;
+    height: 50px;
+	width: 150px;
+	
+    position: absolute;
+    right: -26px;
+    top: 110px;
+	z-index: 3;
+	 
+    .transform_rotate(24deg);
+    .transform_origin(right, top);
+}
+
+.flask_throat_two {
+
+    background: none repeat scroll 0 0 #37acdd;
+	width: 150px;
+    height: 70px;
+	
+    position: absolute;
+    right: -35px;
+    top: 25px;
+	z-index: 3;
+	
+    .transform_rotate(30deg);
+    .transform_origin(right, top);
+}
+
+.flask_throat_three {
+
+    background: none repeat scroll 0 0 #5c30ae;
+   	width: 100%;
+    height: 50px;
+	
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.flask_throat_four {
+
+    background: none repeat scroll 0 0 white;
+    height: 50px;
+	width: 150px;
+	
+    position: absolute;
+    right: -45px;
+    top: -13px;
+	z-index: 3;
+	
+    .transform_rotate(20deg);
+    .transform_origin(right, top);
+}
+
+.flask_bottom{
+    bottom: 0;
+    position: absolute;
+}
+
+.big_triangle{
+    overflow: hidden;
+    position: relative;
+    width: 368px;
+	height: 250px;
+	
+	&:before, &:after{
+		content: "";
+		display: block;
+		
+		width: 0;
+		height: 0;
+		border-top: 250px solid white;
+		
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100;
+	}
+
+	&:before {
+		border-right: 152px solid transparent;
+		left: 0;
+	}
+
+	&:after {
+		border-left: 154px solid transparent;
+		right: 0;
+	}
+}
+
+.flask_bottom_one{
+
+	width: 0;
+    height: 0;
+
+    border-bottom: 55px solid #3a2481;
+    border-left: 32px solid transparent;
+    border-right: 42px solid transparent;
+
+    position: absolute;
+    bottom: 0;
+	z-index: 4;
+}
+
+.flask_bottom_two{
+
+    border-bottom: 165px solid #4266c0;
+    border-left: 93px solid transparent;
+    border-right: 200px solid transparent;
+	
+	width: 0;
+    height: 0;
+	
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.flask_bottom_three {
+
+    width: 180px;
+    height: 55px;
+    background: none repeat scroll 0 0 #4248c0;
+	
+    position: absolute;
+	left: 51px; 
+	bottom: 0;
+    z-index: 1;
+	
+	.skew(35deg);
+}
+
+.flask_bottom_four{
+
+    width: 172px;
+    height: 71px;
+    
+    position: absolute;
+	left: 23px;
+	bottom: -50px;
+    z-index: 3;
+	
+	background-color: #4248c0;
+}
+
+.flask_bottom_five {
+   
+    width: 100%;
+    height: 71px;
+    background-color: #4248c0;
+	
+    position: absolute;
+	left: 50px;
+	bottom: 22px;
+    z-index: 3;
+	
+    .transform_rotate(24deg);
+    .transform_origin(left, top);
+}
+
+.flask_bottom_six{
+    position: absolute;
+	.flask_element_type_one(#37acdd, 300px, 170px, 0, 0, 1, 0, 50%, 50%)
+}
+
+.flask_bottom_seven {
+    position: absolute;
+	.flask_element_type_one(#1493c8, 100%, 218px, 24px, -95px, 3, 24deg, right, top)
+}
+
+.flask_bottom_eight {
+    position: absolute;
+	.flask_element_type_one(#5c30ae, 100%, 50px, 218px, -95px, 3, -12deg, left, top)
+}
+
+
