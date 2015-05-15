@@ -168,7 +168,19 @@ body {
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes flask {}
+@-webkit-keyframes flask {
+  0% {
+    background-color: #3a2481;
+  }
+
+  50% {
+    background-color: #242781;
+  }
+
+  100% {
+    background-color: #244081;
+  }
+}
 @keyframes flask {}
 .flask_bottom_six {
   position: absolute;
@@ -335,3 +347,14 @@ body {
 		border-color: #244081;
 	}
 } */
+.item-3 {
+  width: 6em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+.item-1 {
+  width: 2em;
+}

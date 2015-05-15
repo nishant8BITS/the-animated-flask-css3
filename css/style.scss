@@ -72,19 +72,51 @@ $basic_color: #292548;
 	animation-duration: $duration;
 }
 
-@mixin settings_animation( $property, $value1, $value2, $value3){
-	
+/*@for $i from 3 through 1 {
+  .item-#{$i} { width: 2em * $i; }
+  
 	@-webkit-keyframes flask {
+		0%{
+			background-color: rgba(1 * 58, 1 * 36, 1*129, 1);
+		}
+
+		50%{
+			background-color: rgba(2 * 18, 2 * 19.5, 1*64.5, 1);
+		}
+			
+		100%{
+			background-color: rgba(3 * 1, 2 * 19.5, 1*64.5, 1);
+		}
+	}
+
+	@keyframes flask {
 		0%{
 			$property: $value1;
 		}
 
-		50%{
+		50% {
 			$property: $value2;
 		}
 			
-		100%{
+		100% {
 			$property: $value3;
+		}
+	}
+}*/
+
+@mixin settings_animation( $property, $value1, $value2, $value3){
+	
+	@-webkit-keyframes flask {
+		0%{
+			background-color: $value1;
+		}
+
+		50%{
+			background-color: $value2;
+		}
+			
+		100%{
+			background-color: $value3;
 		}
 	}
 
