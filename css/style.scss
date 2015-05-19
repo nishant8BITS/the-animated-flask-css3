@@ -63,78 +63,19 @@ $basic_color: #292548;
    }
 }
 
-@mixin animation( $duration){
+@mixin animation($name, $duration){
 
-	-webkit-animation-name: flask; 
-	animation-name: flask;
+	-webkit-animation-name: $name; 
+	animation-name: $name;
 	
 	-webkit-animation-duration: $duration;
 	animation-duration: $duration;
-}
-
-/*@for $i from 3 through 1 {
-  .item-#{$i} { width: 2em * $i; }
-  
-	@-webkit-keyframes flask {
-		0%{
-			background-color: rgba(1 * 58, 1 * 36, 1*129, 1);
-		}
-
-		50%{
-			background-color: rgba(2 * 18, 2 * 19.5, 1*64.5, 1);
-		}
-			
-		100%{
-			background-color: rgba(3 * 1, 2 * 19.5, 1*64.5, 1);
-		}
-	}
-
-	@keyframes flask {
-		0%{
-			$property: $value1;
-		}
-
-		50% {
-			$property: $value2;
-		}
-			
-		100% {
-			$property: $value3;
-		}
-	}
-}*/
-
-@mixin settings_animation( $property, $value1, $value2, $value3){
 	
-	@-webkit-keyframes flask {
-		0%{
-			background-color: $value1;
-		}
-
-		50%{
-			background-color: $value2;
-		}
-			
-		100%{
-			background-color: $value3;
-		}
-	}
-
-	@keyframes flask {
-		0%{
-			$property: $value1;
-		}
-
-		50% {
-			$property: $value2;
-		}
-			
-		100% {
-			$property: $value3;
-		}
-	}
+	-webkitanimation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 }
 
+  
 *{
 	margin: 0;
 	padding: 0;
@@ -169,6 +110,8 @@ body{
     position: absolute;
 	left: 152px;
     top: 0;
+	
+	@include animation(flask7, 5s);
 }
 
 .flask_throat_one {
@@ -176,6 +119,7 @@ body{
     @include transform_rotate(24deg);
     @include transform_origin(right, top);
 	@include flask_element(#5c30ae, 150px, 50px, top, 110px, right, -26px, 3);
+	@include animation(flask6, 5s);
 }
 
 .flask_throat_two {
@@ -183,11 +127,13 @@ body{
     @include transform_rotate(30deg);
     @include transform_origin(right, top);
 	@include flask_element(#37acdd, 150px, 70px, top, 25px, right, -35px, 3);
+	@include animation(flask5, 5s);
 }
 
 .flask_throat_three {
     position: absolute;
 	@include flask_element(#5c30ae, 100%, 50px, bottom,0, right, 0, 3);
+	@include animation(flask6, 5s);
 }
 
 .flask_throat_four {
@@ -247,7 +193,7 @@ body{
     bottom: 0;
 	z-index: 4;
 	
-	
+	@include animation(flask1,5s)
 }
 
 .flask_bottom_two{
@@ -263,6 +209,8 @@ body{
     left: 0;
     bottom: 0;
     z-index: 2;
+	
+	@include animation(flask2,5s)
 }
 
 .flask_bottom_five {
@@ -270,15 +218,14 @@ body{
 	@include flask_element(#4248c0, 100%, 75px, bottom, 18px, left, 50px, 3);
     @include transform_rotate(24deg);
     @include transform_origin(left, top);
-	@include animation(1.5s);
+	@include animation(flask3, 5s);
 	
 }
 
-@include settings_animation(background-color, #3a2481, #242781, #244081);
-
 .flask_bottom_six{
     position: absolute;
-	@include flask_element(#37acdd, 100%, 170px, bottom, 0, right, 0, 1)
+	@include flask_element(#37acdd, 100%, 170px, bottom, 0, right, 0, 1);
+	@include animation(flask4, 5s);
 }
 
 .flask_bottom_seven {
@@ -286,6 +233,7 @@ body{
 	@include flask_element(#1493c8, 100%, 218px, bottom, 24px, right, -95px, 3);
 	@include transform_rotate(24deg);
     @include transform_origin(right, top);
+	@include animation(flask5, 5s);
 }
 
 .flask_bottom_eight {
@@ -293,6 +241,7 @@ body{
 	@include flask_element(#5c30ae, 100%, 50px, bottom, 218px, right, -95px, 3);
 	@include transform_rotate(-12deg);
     @include transform_origin(left, top);
+	@include animation(flask6, 5s);
 }
 
 .flask_small{
@@ -405,31 +354,254 @@ body{
 	left: 3%;
 }
 
-/* @-webkit-keyframes border_background {
-	0% {
-		border-color: #3a2481;
+@-webkit-keyframes flask1{
+	0%{
+		border-bottom-color: #3a2481;
 	}
 
-	50% {
-		border-color: #242781;
+	25%{
+		border-bottom-color: #242781;
 	}
 		
-	100% {
-		border-color: #244081;
+	50%{
+		border-bottom-color: #244081;
+	}
+	
+	75%{
+		border-bottom-color: #242781;
 	}
 }
 
-@keyframes border_background {
-	0% {
-		border-color: #3a2481;
+@keyframes flask1{
+	0%{
+		border-bottom-color: #3a2481;
 	}
 
-	50% {
-		border-color: #242781;
+	25%{
+		border-bottom-color: #242781;
 	}
 		
-	100% {
-		border-color: #244081;
+	50%{
+		border-bottom-color: #244081;
 	}
-} */
+	
+	75%{
+		border-bottom-color: #242781;
+	}
+}
 
+@-webkit-keyframes flask2{
+	0%{
+		border-bottom-color: #4266c0;
+	}
+
+	25%{
+		border-bottom-color: #4287c0;
+	}
+		
+	50%{
+		border-bottom-color: #42a8c0;
+	}
+	
+	75%{
+		border-bottom-color: #4287c0;
+	}
+}
+
+@keyframes flask2{
+	0%{
+		border-bottom-color: #4266c0;
+	}
+
+	25%{
+		border-bottom-color: #4287c0;
+	}
+		
+	50%{
+		border-bottom-color: #42a8c0;
+	}
+	
+	75%{
+		border-bottom-color: #4287c0;
+	}
+}
+
+@-webkit-keyframes flask3{
+	0%{
+		background-color: #4248c0;
+	}
+
+	25%{
+		background-color: #4269c0;
+	}
+		
+	50%{
+		background-color: #428ac0;
+	}
+	
+	75%{
+		background-color: #4269c0;
+	}
+}
+
+@keyframes flask3{
+	0%{
+		background-color: #4248c0;
+	}
+
+	25%{
+		background-color: #4269c0;
+	}
+		
+	50%{
+		background-color: #428ac0;
+	}
+	
+	75%{
+		background-color: #4269c0;
+	}
+}
+
+@-webkit-keyframes flask4{
+	0%{
+		background-color: #37acdd;
+	}
+
+	25%{
+		background-color: #37d8dd;
+	}
+		
+	50%{
+		background-color: #37ddb5;
+	}
+	
+	75%{
+		background-color: #37d8dd;
+	}
+}
+
+@keyframes flask4{
+	0%{
+		background-color: #37acdd;
+	}
+
+	25%{
+		background-color: #37d8dd;
+	}
+		
+	50%{
+		background-color: #37ddb5;
+	}
+	
+	75%{
+		background-color: #37d8dd;
+	}
+}
+
+@-webkit-keyframes flask5{
+	0%{
+		background-color: #1493c8;
+	}
+
+	25%{
+		background-color: #14c2c8;
+	}
+		
+	50%{
+		background-color: #14c89d;
+	}
+	
+	75%{
+		background-color: #14c2c8;
+	}
+}
+
+@keyframes flask5{
+	0%{
+		background-color: #1493c8;
+	}
+
+	25%{
+		background-color: #14c2c8;
+	}
+		
+	50%{
+		background-color: #14c89d;
+	}
+	
+	75%{
+		background-color: #14c2c8;
+	}
+}
+
+@-webkit-keyframes flask6{
+	0%{
+		background-color: #5c30ae;
+	}
+
+	25%{
+		background-color: #3a30ae;
+	}
+		
+	50%{
+		background-color: #3048ae;
+	}
+	
+	75%{
+		background-color: #3a30ae;
+	}
+}
+
+@keyframes flask6{
+	0%{
+		background-color: #5c30ae;
+	}
+
+	25%{
+		background-color: #3a30ae;
+	}
+		
+	50%{
+		background-color: #3048ae;
+	}
+	
+	75%{
+		background-color: #3a30ae;
+	}
+}
+
+@-webkit-keyframes flask7{
+	0%{
+		background-color: #6c49ac;
+	}
+
+	25%{
+		background-color: #5249ac;
+	}
+		
+	50%{
+		background-color: #495aac;
+	}
+	
+	75%{
+		background-color: #5249ac;
+	}
+}
+
+@keyframes flask7{
+	0%{
+		background-color: #6c49ac;
+	}
+
+	25%{
+		background-color: #5249ac;
+	}
+		
+	50%{
+		background-color: #495aac;
+	}
+	
+	75%{
+		background-color: #5249ac;
+	}
+}
