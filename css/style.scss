@@ -37,6 +37,20 @@ $basic_color: #292548;
 	transform: scale($value1);
 }
 
+@mixin translate_scale($x, $y, $value1){
+	
+	-webkit-transform: translateZ(0px) translate($x, $y) scale($value1);
+	-ms-transform: translateZ(0px) translate($x, $y) scale($value1); 
+	transform: translateZ(0px) translate($x, $y) scale($value1);
+}
+
+@mixin d($x, $y, $value1, $value2){
+	
+	-webkit-transform: translateZ(0px) translate($x, $y) scale($value1) rotateZ($value2);
+	-ms-transform: translateZ(0px) translate($x, $y) scale($value1)  rotateZ($value2);
+	transform: translateZ(0px) translate($x, $y) scale($value1)  rotateZ($value2);
+}
+
 @mixin flask_element($background, $width, $height, $enable_top, $value1, $enable, $value2, $z_index){
 
     background-color: $background;
@@ -63,7 +77,7 @@ $basic_color: #292548;
    }
 }
 
-@mixin animation($name, $duration){
+@mixin animation($name, $duration, $delay){
 
 	-webkit-animation-name: $name; 
 	animation-name: $name;
@@ -71,8 +85,11 @@ $basic_color: #292548;
 	-webkit-animation-duration: $duration;
 	animation-duration: $duration;
 	
-	-webkitanimation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
+	
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
 }
 
   
@@ -101,7 +118,6 @@ body{
 
 .flask_throat {
 
-    background-color: #6c49ac;
 	overflow: hidden;
 	
     height: 155px;
@@ -110,8 +126,6 @@ body{
     position: absolute;
 	left: 152px;
     top: 0;
-	
-	@include animation(flask7, 5s);
 }
 
 .flask_throat_one {
@@ -119,21 +133,21 @@ body{
     @include transform_rotate(24deg);
     @include transform_origin(right, top);
 	@include flask_element(#5c30ae, 150px, 50px, top, 110px, right, -26px, 3);
-	@include animation(flask6, 5s);
+ 	@include animation(flask6, 5s, 0s);
 }
 
 .flask_throat_two {
     position: absolute;
-    @include transform_rotate(30deg);
+    @include transform_rotate(20deg);
     @include transform_origin(right, top);
-	@include flask_element(#37acdd, 150px, 70px, top, 25px, right, -35px, 3);
-	@include animation(flask5, 5s);
+	@include flask_element(#37acdd, 150px, 60px, top, 35px, right, -35px, 3);
+ 	@include animation(flask5, 5s, 0s);
 }
 
 .flask_throat_three {
     position: absolute;
 	@include flask_element(#5c30ae, 100%, 50px, bottom,0, right, 0, 3);
-	@include animation(flask6, 5s);
+ 	@include animation(flask6, 5s, 0s);
 }
 
 .flask_throat_four {
@@ -141,7 +155,8 @@ body{
     position: absolute;
     @include transform_rotate(20deg);
     @include transform_origin(right, top);
-	@include flask_element($basic_color, 150px, 50px, top, -13px, right, -45px, 3);
+	@include flask_element(#6c49ac, 150px, 20px, top, 100px, right, -45px, 3);
+ 	@include animation(flask7, 5s, 0s);
 }
 
 .flask_bottom{
@@ -193,7 +208,7 @@ body{
     bottom: 0;
 	z-index: 4;
 	
-	@include animation(flask1,5s)
+	@include animation(flask1,5s, 0s)
 }
 
 .flask_bottom_two{
@@ -210,7 +225,7 @@ body{
     bottom: 0;
     z-index: 2;
 	
-	@include animation(flask2,5s)
+	@include animation(flask2,5s, 0s)
 }
 
 .flask_bottom_five {
@@ -218,14 +233,14 @@ body{
 	@include flask_element(#4248c0, 100%, 75px, bottom, 18px, left, 50px, 3);
     @include transform_rotate(24deg);
     @include transform_origin(left, top);
-	@include animation(flask3, 5s);
+	@include animation(flask3, 5s, 0s);
 	
 }
 
 .flask_bottom_six{
     position: absolute;
 	@include flask_element(#37acdd, 100%, 170px, bottom, 0, right, 0, 1);
-	@include animation(flask4, 5s);
+	@include animation(flask4, 5s, 0s);
 }
 
 .flask_bottom_seven {
@@ -233,7 +248,7 @@ body{
 	@include flask_element(#1493c8, 100%, 218px, bottom, 24px, right, -95px, 3);
 	@include transform_rotate(24deg);
     @include transform_origin(right, top);
-	@include animation(flask5, 5s);
+	@include animation(flask5, 5s, 0s);
 }
 
 .flask_bottom_eight {
@@ -241,7 +256,7 @@ body{
 	@include flask_element(#5c30ae, 100%, 50px, bottom, 218px, right, -95px, 3);
 	@include transform_rotate(-12deg);
     @include transform_origin(left, top);
-	@include animation(flask6, 5s);
+	@include animation(flask6, 5s, 0s);
 }
 
 .flask_small{
@@ -250,7 +265,6 @@ body{
 	height: 230px;
 	
 	.flask_throat {
-		background-color: #6c49ac;
 		height: 99px;
 		left: 82px;
 		overflow: hidden;
@@ -273,18 +287,16 @@ body{
 	
 	.flask_throat_two {
 		background-color: #37acdd;
-		height: 55px;
+		height: 25px;
 		position: absolute;
 		right: -30px;
-		top: 11px;
-		transform: rotate(30deg);
+		top: 37px;
 		transform-origin: right top 0;
-		width: 60px;
+		width: 75px;
 		z-index: 3;
 	}
 	
 	.flask_throat_three {
-		background-color: #5c30ae;
 		bottom: 0;
 		height: 20px;
 		position: absolute;
@@ -293,6 +305,10 @@ body{
 		z-index: 3;
 	}
 
+	.flask_throat_four {
+		top: 60px;
+		z-index: 2;
+	}
 	
 	.big_triangle{
 		width: 200px;
@@ -603,5 +619,179 @@ body{
 	
 	75%{
 		background-color: #5249ac;
+	}
+}
+
+.flask_center{
+	right: 22%;
+}
+
+.flask_left{
+	.small_circle{
+		@include animation(circle, 2000ms, 100ms);
+	}
+	
+	.little_circle_white{
+		left: 48%;
+		@include animation(circle, 2000ms, 0ms);
+	}
+
+	.little_circle_purpure{
+		left: 50%;
+		@include animation(circle, 2000ms, 200ms);
+	}
+	
+	.little_circle_blue{
+		left: 45%;
+		@include animation(circle, 2000ms, 300ms);
+	}
+	
+	.element4{
+		left: 45%;
+		@include animation(circle, 2000ms, 600ms);
+	}
+	
+	.element5{
+		left: 53%;
+		top: 5%;
+		@include animation(circle, 2000ms, 900ms);
+	}
+	
+	.element6{
+		top: 5%;
+		@include animation(circle, 3000ms, 1000ms);
+	}
+}
+
+.flask_right{
+
+	.small_circle{
+		@include animation(circle, 4200ms, 400ms);
+	}
+	
+	.little_circle_white{
+		left: 48%;
+		@include animation(circle, 4200ms, 0ms);
+	}
+
+	.little_circle_purpure{
+		left: 52%;
+		@include animation(circle, 4200ms, 200ms);
+	}
+	
+	.little_circle_blue{
+		left: 45%;
+		@include animation(circle, 4200ms, 600ms);
+	}
+}
+
+.circle{
+
+	border-radius: 50%;
+	border: 1px solid #fff;
+	
+	position: absolute;
+	left: 50%;
+	
+	@include translate(-50%, 20px);
+	@include animation(circle, 5s, 0s);
+}
+
+.little_circle{
+	width: 5px;
+	height: 5px;
+}
+
+.little_circle_white{
+	background-color: #fff;
+}
+
+.little_circle_purpure{
+	background-color: #6c49ac;
+	border: 1px solid #6c49ac;
+}
+
+.little_circle_blue{
+	background-color: #117fba;
+	border: 1px solid #117fba;
+}
+
+.small_circle{
+	width: 20px;
+	height: 20px;
+}
+
+.middle_circle{
+	width: 45px;
+	height: 45px;
+}
+
+.d{
+	width: 120px;
+	height: 120px;
+	
+	border-width: 3px;
+	background: url("../images/sprites.png") no-repeat -35% 45%;
+	
+	@include d(-50%, -160px, 0, 0);
+	@include animation(animation_d, 5500ms, 900ms);
+}
+
+.l{
+
+	width: 45px;
+	height: 45px;
+	background: url("../images/sprites.png") no-repeat 110% 45%;
+	
+	position: absolute;
+	left: 50%;
+	
+	@include translate(-50%, 20px);
+	@include animation(rotate, 5000ms, 400ms);
+}
+
+@keyframes circle{
+	0%{
+		@include translate_scale(-50%, 20px, 1);
+		opacity: 1
+	}
+
+	85%{
+		opacity: 0
+	}
+	
+	100%{
+		@include translate_scale(-50%, -200px, 0);
+		opacity: 0
+	}
+}
+
+@keyframes rotate{
+	0%{
+		@include d(-50%, 20px, 1, 0);
+		opacity: 1
+	}
+	
+	80%{
+		@include d(-50%, -200px, 1, 360deg);
+	}
+	
+	100%{
+		opacity: 0
+	}
+}
+
+@keyframes animation_d{
+	0%{
+		@include d(-50%, -160px, 0, 0);
+		opacity: 1
+	}
+	
+	80%{
+		@include d(-50%, -160px, 1, 360deg);
+	}
+	
+	100%{
+		opacity: 0
 	}
 }

@@ -22,19 +22,12 @@ body {
 }
 
 .flask_throat {
-  background-color: #6c49ac;
   overflow: hidden;
   height: 155px;
   width: 62px;
   position: absolute;
   left: 152px;
   top: 0;
-  -webkit-animation-name: flask7;
-  animation-name: flask7;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
-  animation-iteration-count: infinite;
 }
 
 .flask_throat_one {
@@ -56,31 +49,35 @@ body {
   animation-name: flask6;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_throat_two {
   position: absolute;
-  -ms-transform: rotate(30deg);
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
   -ms-transform-origin: right top;
   -webkit-transform-origin: right top;
   transform-origin: right top;
   background-color: #37acdd;
   width: 150px;
-  height: 70px;
+  height: 60px;
   position: absolute;
   z-index: 3;
   right: -35px;
-  top: 25px;
+  top: 35px;
   -webkit-animation-name: flask5;
   animation-name: flask5;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_throat_three {
@@ -96,8 +93,10 @@ body {
   animation-name: flask6;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_throat_four {
@@ -108,13 +107,21 @@ body {
   -ms-transform-origin: right top;
   -webkit-transform-origin: right top;
   transform-origin: right top;
-  background-color: #292548;
+  background-color: #6c49ac;
   width: 150px;
-  height: 50px;
+  height: 20px;
   position: absolute;
   z-index: 3;
   right: -45px;
-  top: -13px;
+  top: 100px;
+  -webkit-animation-name: flask7;
+  animation-name: flask7;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_bottom {
@@ -161,8 +168,10 @@ body {
   animation-name: flask1;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_bottom_two {
@@ -179,8 +188,10 @@ body {
   animation-name: flask2;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_bottom_five {
@@ -202,8 +213,10 @@ body {
   animation-name: flask3;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_bottom_six {
@@ -219,8 +232,10 @@ body {
   animation-name: flask4;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_bottom_seven {
@@ -242,8 +257,10 @@ body {
   animation-name: flask5;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_bottom_eight {
@@ -265,8 +282,10 @@ body {
   animation-name: flask6;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkitanimation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .flask_small {
@@ -274,7 +293,6 @@ body {
   height: 230px;
 }
 .flask_small .flask_throat {
-  background-color: #6c49ac;
   height: 99px;
   left: 82px;
   overflow: hidden;
@@ -295,23 +313,25 @@ body {
 }
 .flask_small .flask_throat_two {
   background-color: #37acdd;
-  height: 55px;
+  height: 25px;
   position: absolute;
   right: -30px;
-  top: 11px;
-  transform: rotate(30deg);
+  top: 37px;
   transform-origin: right top 0;
-  width: 60px;
+  width: 75px;
   z-index: 3;
 }
 .flask_small .flask_throat_three {
-  background-color: #5c30ae;
   bottom: 0;
   height: 20px;
   position: absolute;
   right: 0;
   width: 100%;
   z-index: 3;
+}
+.flask_small .flask_throat_four {
+  top: 60px;
+  z-index: 2;
 }
 .flask_small .big_triangle {
   width: 200px;
@@ -598,5 +618,270 @@ body {
 
   75% {
     background-color: #5249ac;
+  }
+}
+.flask_center {
+  right: 22%;
+}
+
+.flask_left .small_circle {
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms;
+}
+.flask_left .little_circle_white {
+  left: 48%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+}
+.flask_left .little_circle_purpure {
+  left: 50%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+.flask_left .little_circle_blue {
+  left: 45%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+}
+.flask_left .element4 {
+  left: 45%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+.flask_left .element5 {
+  left: 53%;
+  top: 5%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+.flask_left .element6 {
+  top: 5%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 3000ms;
+  animation-duration: 3000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}
+
+.flask_right .small_circle {
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 4200ms;
+  animation-duration: 4200ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+.flask_right .little_circle_white {
+  left: 48%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 4200ms;
+  animation-duration: 4200ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+}
+.flask_right .little_circle_purpure {
+  left: 52%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 4200ms;
+  animation-duration: 4200ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+.flask_right .little_circle_blue {
+  left: 45%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 4200ms;
+  animation-duration: 4200ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateZ(0px) translate(-50%, 20px);
+  -ms-transform: translateZ(0px) translate(-50%, 20px);
+  transform: translateZ(0px) translate(-50%, 20px);
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.little_circle {
+  width: 5px;
+  height: 5px;
+}
+
+.little_circle_white {
+  background-color: #fff;
+}
+
+.little_circle_purpure {
+  background-color: #6c49ac;
+  border: 1px solid #6c49ac;
+}
+
+.little_circle_blue {
+  background-color: #117fba;
+  border: 1px solid #117fba;
+}
+
+.small_circle {
+  width: 20px;
+  height: 20px;
+}
+
+.middle_circle {
+  width: 45px;
+  height: 45px;
+}
+
+.d {
+  width: 120px;
+  height: 120px;
+  border-width: 3px;
+  background: url("../images/sprites.png") no-repeat -35% 45%;
+  -webkit-transform: translateZ(0px) translate(-50%, -160px) scale(0) rotateZ(0);
+  -ms-transform: translateZ(0px) translate(-50%, -160px) scale(0) rotateZ(0);
+  transform: translateZ(0px) translate(-50%, -160px) scale(0) rotateZ(0);
+  -webkit-animation-name: animation_d;
+  animation-name: animation_d;
+  -webkit-animation-duration: 5500ms;
+  animation-duration: 5500ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+.l {
+  width: 45px;
+  height: 45px;
+  background: url("../images/sprites.png") no-repeat 110% 45%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateZ(0px) translate(-50%, 20px);
+  -ms-transform: translateZ(0px) translate(-50%, 20px);
+  transform: translateZ(0px) translate(-50%, 20px);
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: translateZ(0px) translate(-50%, 20px) scale(1);
+    -ms-transform: translateZ(0px) translate(-50%, 20px) scale(1);
+    transform: translateZ(0px) translate(-50%, 20px) scale(1);
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0px) translate(-50%, -200px) scale(0);
+    -ms-transform: translateZ(0px) translate(-50%, -200px) scale(0);
+    transform: translateZ(0px) translate(-50%, -200px) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: translateZ(0px) translate(-50%, 20px) scale(1) rotateZ(0);
+    -ms-transform: translateZ(0px) translate(-50%, 20px) scale(1) rotateZ(0);
+    transform: translateZ(0px) translate(-50%, 20px) scale(1) rotateZ(0);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translateZ(0px) translate(-50%, -200px) scale(1) rotateZ(360deg);
+    -ms-transform: translateZ(0px) translate(-50%, -200px) scale(1) rotateZ(360deg);
+    transform: translateZ(0px) translate(-50%, -200px) scale(1) rotateZ(360deg);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animation_d {
+  0% {
+    -webkit-transform: translateZ(0px) translate(-50%, -160px) scale(0) rotateZ(0);
+    -ms-transform: translateZ(0px) translate(-50%, -160px) scale(0) rotateZ(0);
+    transform: translateZ(0px) translate(-50%, -160px) scale(0) rotateZ(0);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translateZ(0px) translate(-50%, -160px) scale(1) rotateZ(360deg);
+    -ms-transform: translateZ(0px) translate(-50%, -160px) scale(1) rotateZ(360deg);
+    transform: translateZ(0px) translate(-50%, -160px) scale(1) rotateZ(360deg);
+  }
+
+  100% {
+    opacity: 0;
   }
 }
