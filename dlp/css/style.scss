@@ -657,6 +657,30 @@ body{
 
 .flask_center{
 	right: 25%;
+	
+	.circle {
+		margin-left: -5px;
+	}
+	
+	.little_circle_white{
+		left: 55%;
+		@include animation(circle, 3000ms, 0ms);
+	}
+	
+	.little_circle_purpure{
+		left: 50%;
+		@include animation(circle, 3000ms, 200ms);
+	}
+	
+	.little_circle_blue{
+		left: 45%;
+		@include animation(circle, 3000ms, 500ms);
+	}
+	
+	.element5{
+		left: 50%;
+		@include animation(circle, 3000ms, 1400ms);
+	}
 }
 
 .flask_left{
@@ -727,13 +751,14 @@ body{
 	position: absolute;
 	left: 50%;
 	
-	@include translate(-50%, 20px);
+	margin: 25px 0 0 -13px;
 	@include animation(circle, 5s, 0s);
 }
-
+ 
 .little_circle{
 	width: 5px;
 	height: 5px;
+	margin-left: 4px;
 }
 
 .little_circle_white{
@@ -758,6 +783,7 @@ body{
 .middle_circle{
 	width: 45px;
 	height: 45px;
+	margin-left: 2px;
 }
 
 .d{
@@ -778,10 +804,26 @@ body{
 	background: url("../images/sprites.png") no-repeat 110% 45%;
 	
 	position: absolute;
-	left: 50%;
+	left: 48%;
 	
-	@include translate(-50%, 20px);
+	margin: 25px 0 0 -13px;
 	@include animation(rotate, 5000ms, 400ms);
+}
+
+@-webkit-keyframes circle{
+	0%{
+		@include translate_scale(-50%, 20px, 1);
+		opacity: 1
+	}
+
+	85%{
+		opacity: 0
+	}
+	
+	100%{
+		@include translate_scale(-50%, -200px, 0);
+		opacity: 0
+	}
 }
 
 @keyframes circle{
@@ -800,19 +842,29 @@ body{
 	}
 }
 
-@keyframes rotate{
+@-webkit-keyframes rotate{
 
 	0%{
-		@include d(-50%, 20px, 1, 0);
+		@include d(0%, 20px, 1, 0);
 		opacity: 1
 	}
 	
-	80%{
-		@include d(-50%, -200px, 1, 360deg);
+	100%{
+		opacity: 0;
+		@include d(0%, -200px, 1, 360deg);
+	}
+}
+
+@keyframes rotate{
+
+	0%{
+		@include d(0%, 20px, 1, 0);
+		opacity: 1
 	}
 	
 	100%{
-		opacity: 0
+		opacity: 0;
+		@include d(0%, -200px, 1, 360deg);
 	}
 }
 
@@ -823,11 +875,21 @@ body{
 		opacity: 1
 	}
 	
-	80%{
-		@include d(-50%, -160px, 1, 360deg);
+	100%{
+		opacity: 0;
+		@include d(-50%, -200px, 1, 360deg);
+	}
+}
+
+@-webkit-keyframes animation_d{
+
+	0%{
+		@include d(-50%, -160px, 0, 0);
+		opacity: 1
 	}
 	
 	100%{
-		opacity: 0
+		opacity: 0;
+		@include d(-50%, -200px, 1, 360deg);
 	}
 }
